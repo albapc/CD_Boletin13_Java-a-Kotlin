@@ -1,5 +1,7 @@
 open class Seleccion(var id: Int=0, var edade: Int=0, var nome: String="", var apelido: String=""){
 
+    //se ponen los valores por defecto para que el programa no nos de error al dejar campos en blanco
+
     init {
 
     }
