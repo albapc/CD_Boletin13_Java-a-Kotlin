@@ -1,28 +1,11 @@
-class Xogador : Seleccion {
+class Xogador(var dorsal: Int, var demarcacion: String, id: Int, edade: Int, nome: String, apelido: String) : Seleccion(id, edade, nome, apelido) {
 
-    var dorsal: Int = 0
-    var demarcacion: String? = null
+    //var = variables de clase, el resto son heredados de la superclase
 
-    constructor() {
+    init {
 
     }
 
-    constructor(dorsal: Int, demarcacion: String) : super() {
-        this.dorsal = dorsal
-        this.demarcacion = demarcacion
-    }
-
-    constructor (
-        dorsal: Int,
-        demarcacion: String,
-        id: Int,
-        edade: Int,
-        nome: String,
-        apelido: String
-    ) : super(id, edade, nome, apelido) {
-        this.dorsal = dorsal
-        this.demarcacion = demarcacion
-    }
 
     override fun viaxar() {
         println("Viaxan os xogadores...")
@@ -33,7 +16,7 @@ class Xogador : Seleccion {
     fun entrenar() {}
 
     override fun toString(): String {
-        return "Xogador: " + "dorsal= " + dorsal + ", demarcacion= " + demarcacion + " " + super.toString() + '}';
+        return "Xogador: " + "dorsal= " + dorsal + ", demarcacion= " + demarcacion + " " + super.toString() + '}'
     }
 
 
