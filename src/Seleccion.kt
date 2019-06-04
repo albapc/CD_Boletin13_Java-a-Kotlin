@@ -1,25 +1,16 @@
-open class Seleccion {
+open class Seleccion(var id: Int=0, var edade: Int=0, var nome: String="", var apelido: String=""){
 
-    var id: Int = 0
-    var edade: Int = 0
-    var nome: String? = null
-    var apelido: String? = null
+    init {
 
-    constructor() {}
-
-    constructor(id: Int, edade: Int, nome: String, apelido: String) {
-        this.id = id
-        this.edade = edade
-        this.nome = nome
-        this.apelido = apelido
     }
+
 
     fun concentrarse() {
         println("Concéntrase a selección")
     }
 
     open fun viaxar() {
-        println("Viaxa a selección")
+        println("Viaxa a selección...")
     }
 
     override fun toString(): String {
