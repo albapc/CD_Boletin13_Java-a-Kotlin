@@ -1,24 +1,10 @@
-class Adestrador : Seleccion {
+class Adestrador(var idFederacion: String, id: Int, edade: Int, nome: String, apelido: String) : Seleccion(id, edade, nome, apelido) {
 
-    var idFederacion: String? = null
 
-    constructor() {
+    init {
 
     }
 
-    constructor(idFederacion: String) : super() {
-        this.idFederacion = idFederacion
-    }
-
-    constructor(
-        idFederacion: String,
-        id: Int,
-        edade: Int,
-        nome: String,
-        apelido: String
-    ) : super(id, edade, nome, apelido) {
-        this.idFederacion = idFederacion
-    }
 
     override fun viaxar() {
         println("Viaxa o adestrador...")
