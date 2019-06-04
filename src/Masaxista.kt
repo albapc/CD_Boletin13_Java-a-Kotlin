@@ -1,25 +1,7 @@
-class Masaxista : Seleccion {
+class Masaxista(var titulacion: String, var anosExperiencia: Int, id: Int, edade: Int, nome: String, apelido: String) : Seleccion(id, edade, nome, apelido) {
 
-    var titulacion: String? = null
-    var anosExperiencia: Int = 0
+    init {
 
-    constructor() {}
-
-    constructor(titulacion: String, anosExperiencia: Int) : super() {
-        this.titulacion = titulacion
-        this.anosExperiencia = anosExperiencia
-    }
-
-    constructor(
-        titulacion: String,
-        anosExperiencia: Int,
-        id: Int,
-        edade: Int,
-        nome: String,
-        apelido: String
-    ) : super(id, edade, nome, apelido) {
-        this.titulacion = titulacion
-        this.anosExperiencia = anosExperiencia
     }
 
     override fun viaxar() {
