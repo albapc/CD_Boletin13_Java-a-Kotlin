@@ -1,5 +1,5 @@
 
-object Boletin13 {
+object Boletin13 { //clase main
     @JvmStatic
     fun main(args: Array<String>) {
         val xog1 = Xogador(15, "30", 120, 30, "Pepe", "Garcia")
