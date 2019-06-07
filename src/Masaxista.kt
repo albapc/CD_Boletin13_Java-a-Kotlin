@@ -1,18 +1,42 @@
+//parametros de la clase Masaxista y de qué clase hereda el resto
+
+/* Kotlin: class NombreDeLaClase(var parametro1: TipoParametro, var parametroN: TipoParametro, parametroHeredado: TipoParametro)
+: NombreSuperClase(p1SuperClase, pNSuperClase) {}
+ * Java: public class NombreDeLaClase extends NombreSuperClase {} (los parámetros irían en un constructor dentro de la clase)
+ */
+
 class Masaxista(var titulacion: String, var anosExperiencia: Int, id: Int, edade: Int, nome: String, apelido: String) : Seleccion(id, edade, nome, apelido) {
-    //parametros de la clase Masaxista y de qué clase hereda el resto
 
-
-    init { //constructor por defecto
+    //constructor por defecto
+    /* Kotlin: init {}
+     * Java: public nombreClase() {} (después si fuera necesario, añadiria otro constructor con los parametros dentro, en Kotlin ya
+     * estaría hecho, por defecto y parametrizado, en una única línea de código)
+     * En Java también sería necesario hacer uso de los getters y los setters, cosa que en Kotlin no lo es
+     */
+    init {
 
     }
 
-    override fun viaxar() { //método heredado
+
+    //método heredado y sobreescrito de la clase Selección
+    /* Kotlin: override fun  nombreMétodo(parametros, si fuese necesario) {}
+     * Java: @Override (debajo estaría el método)
+     */
+    override fun viaxar() {
         println("Viaxan os xogadores...")
     }
 
-    fun darMasaxes() {} //método propio de la clase
+    //método propio de la clase
+    /* Kotlin: fun nombreMetodo(parametros si fuese necesario) {}
+    * Java: tipoDeacceso TipoQueDevuelve nombreMétodo(parametros si fuese necesario) {}
+    */
 
-    override fun toString(): String { //método toString que imprime las variables propias y heredadas de la superclase Selección
+    fun darMasaxes() {}
+
+    //método toString que imprime las variables propias y heredadas de la superclase Selección
+    //(diferencias comentadas en el método "viaxar")
+
+    override fun toString(): String {
         return "Masaxista: " + "titulacion= " + titulacion + ", anosExperiencia= " + anosExperiencia + " " + super.toString() + '}'.toString()
     }
 }
